@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { connect } from "react-redux";
+
+import Competitions from "./pages/competitions/Competitions";
+import CompetitionsDetail from "./pages/competitions-detail/Competitions-Detail";
+import Teams from "./pages/teams/Teams";
+import Squads from "./pages/squads/Squads";
+import Header from "./shared/Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Routes>
+        <Route path="*" element={<Navigate to="/competitions" />}></Route>
+        <Route exact path="/competitions" element={<Competitions />}></Route>
+        <Route
+          exact
+          path="/competitions/:compId"
+          element={<CompetitionsDetail />}
+        ></Route>
+        <Route
+          exact
+          path="/competitions/:compId/:seasonId"
+          element={<Teams />}
+        ></Route>
+        <Route
+          exact
+          path="/competitions/:compId/:seasonId/:teamId"
+          element={<Squads />}
+        ></Route>
+      </Routes>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    ...state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setStateCompetitions: (comps) => {
+      dispatch({ type: "GET_COMPS", competitions: comps });
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

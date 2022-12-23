@@ -1,0 +1,23 @@
+.teams-container {
+    display: grid;
+    grid-template-columns: auto auto auto
+}
+
+.item {
+    background-color: lightgrey;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.club-crest {
+    width: 100px;
+    height: 100px;
+}

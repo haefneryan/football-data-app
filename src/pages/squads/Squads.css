@@ -1,0 +1,27 @@
+.squad {
+    width: 80vw;
+    margin: auto;
+}
+
+.container {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.squad-item {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.info {
+    width: 50%;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}

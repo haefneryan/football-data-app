@@ -1,0 +1,34 @@
+.header {
+
+}
+
+.header-name {
+    color: white;
+    background-color: #330066;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb-item {
+    padding: 5px
+}
+
+.link {
+    color: #330066;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.link:hover {
+    cursor: pointer;
+}
