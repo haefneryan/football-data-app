@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/football-data-app/static/css/main.fd57b535.css",
+    "main.js": "/football-data-app/static/js/main.79f04e74.js",
+    "index.html": "/football-data-app/index.html",
+    "main.fd57b535.css.map": "/football-data-app/static/css/main.fd57b535.css.map",
+    "main.79f04e74.js.map": "/football-data-app/static/js/main.79f04e74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd57b535.css",
+    "static/js/main.79f04e74.js"
+  ]
+}
